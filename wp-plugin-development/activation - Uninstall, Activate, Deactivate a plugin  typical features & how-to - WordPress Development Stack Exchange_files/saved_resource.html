@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://teststackoverflow.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Stack Overflow Domain</title>
+    <style>
+        html {
+            font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;
+            width: 1000px;
+            margin: 0 auto;
+            border-left: solid 1px #DDD;
+            border-right: solid 1px #DDD;
+            border-bottom: solid 1px #DDD;
+        }
+        body {
+            height: 100%;
+            margin: 0;
+        }
+        .logo {
+            height: 16px;
+            width: 16px;
+            vertical-align: text-top;
+        }
+        a {
+            color: #0077cc;
+        }
+        a:visited {
+            color: #4a6b82;
+        }
+        .welcome, .timing-header {
+            margin-bottom: 10px;
+            padding: 30px 20px 0 20px;
+            border-bottom: 1px solid #cccccc;
+            color: #444;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .message, .timings-content {
+            color: #444;
+            font-size: 14px;
+            padding: 10px 20px 0 20px;
+        }
+        .initial-hidden {
+            display: none;
+        }
+        .timings-data table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .timings-data th {
+            border-bottom: solid 1px #cccccc;    
+        }
+        .timings-data th, .timings-data td {
+            padding: 0 8px;
+            font-size: 13px;
+            text-align: left;
+        }
+        .timings-data td:nth-child(2) {
+            color: #BBB;
+        }
+        .timings-data td div {
+            height: 14px;
+        }
+        .timings-loading {
+            padding-bottom: 15px;
+        }
+
+        .timings-data .dns div { background: #8BAAD1; }
+        .timings-data .connect div { background: #8CBB4E; }
+        .timings-data .ssl div { background: #795892; }
+        .timings-data .request div { background: #0099B2; }
+        .timings-data .response div { background: #D99D35; }
+        .timings-data .dom div { background: #BD4D32; }
+        .timings-data .domcontent div { background: #DD4678; }
+        .timings-data .load div { background: #1D72AA; }
+        .json {
+            background: #eee;
+            margin: 5px 0 15px 0;
+            padding: 4px;
+            white-space: pre;
+            font-size: 12px;
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        }
+        .timings-success, .timings-fail {
+            margin: 15px;
+            text-align: center;
+        }
+        .timings-success {
+            color: #1D72AA;
+        }
+        .timings-fail {
+            color: #990000;
+        }
+    </style>
+<style type="text/css"></style></head>
+<body>
+    <div class="content">
+        <div class="welcome">
+            <img class="logo" src="favicon.ico">
+            Welcome to the Stack Overflow test domain!
+        </div>
+        <div class="message">
+            So what is it that we do here?
+
+            <p>
+                We are always seeking ways to improve performance and usability for our users.
+                Most our pages render in less than 100ms, the core pages like a question page renders in less than 40ms on average.
+                However, that doesn't help users who are far away from our data center waiting considerably longer to get the page we just rendered.
+            </p>
+
+            <p>
+                We can do more to improve load time for those users, hopefully by quite a bit.
+                This domain helps us evaluate changes in DNS, geolocation, SSL termination, load balancing, and routing so that we can make all Stack Exchange sites faster all over the world.
+                You may have arrived here from looking at our iframe, welcome! We are not adding this extra hit to every request, but less than 1% of the requests
+                to our network.  The intent is to keep ay eye on performance and evaluate infrastructure changes and the impact they have.
+            </p>
+        </div>
+        <div class="timings">
+            <div class="timing-header">
+                Browser Timing Info
+            </div>
+            <div class="timings-content">
+                <div class="timings-loading js-hide-on-timings" style="display: none;">
+                    Checking browser timings <img src="data:image/gif;base64,R0lGODlhEgAEAKEAAH9/fwAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJDwACACwAAAAAEgAEAAACB5SPqcvtrwoAIfkECQ8AAgAsAAAAAAQABAAAAgSEjwkFACH5BAkPAAIALAAAAAALAAQAAAIMjCMJC4fKXBKsnVkLACH5BAkPAAIALAAAAAASAAQAAAIRjCN5mOCwkojt0Xnkg1l1sRUAIfkECQ8AAgAsAAAAABIABAAAAhGEIRkbKRwOUsxBaStdeDdfAAAh+QQJDwACACwHAAAACwAEAAACDIQhGRuHylwSrJ1ZCwAh+QQFDwACACwOAAAABAAEAAACBISPCQUAOw==" height="4px" width="18px">
+                </div>
+                <div class="timings-data initial-hidden js-show-on-timings" style="display: block;">
+                    This is a breakdown of the time that went into loading this page:
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Breakdown</th>
+                                <th>Start</th>
+                                <th>Time</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr><td style="width: 500px;"></td><td>0 ms</td><td>40 ms</td><td>Fetch Start</td></tr><tr><td class="dns" style="width: 500px;"><div style="margin-left: 7.30193501277839px; width: 57.6933187294633px;"></div></td><td>40 ms</td><td>327 ms</td><td>Domain Lookup Start</td></tr><tr><td class="dns" style="width: 500px;"><div style="margin-left: 66.9952537422417px; width: 1px;"></div></td><td>367 ms</td><td>0 ms</td><td>Domain Lookup End</td></tr><tr><td class="connect" style="width: 500px;"><div style="margin-left: 66.9952537422417px; width: 32.136546184739px;"></div></td><td>367 ms</td><td>187 ms</td><td>Connect Start</td></tr><tr><td class="ssl" style="width: 500px;"><div style="margin-left: 101.131799926981px; width: 54.9550930996714px;"></div></td><td>554 ms</td><td>312 ms</td><td>Secure Connection Start</td></tr><tr><td class="connect" style="width: 500px;"><div style="margin-left: 158.086893026652px; width: 1px;"></div></td><td>866 ms</td><td>0 ms</td><td>Connect End</td></tr><tr><td class="request" style="width: 500px;"><div style="margin-left: 158.086893026652px; width: 43.6370938298649px;"></div></td><td>866 ms</td><td>250 ms</td><td>Request Start</td></tr><tr><td class="request" style="width: 500px;"><div style="margin-left: 203.723986856517px; width: 1px;"></div></td><td>1116 ms</td><td>16 ms</td><td>Response Start</td></tr><tr><td class="response" style="width: 500px;"><div style="margin-left: 206.644760861628px; width: 1px;"></div></td><td>1132 ms</td><td>0 ms</td><td>Response End</td></tr><tr><td class="dom" style="width: 500px;"><div style="margin-left: 206.644760861628px; width: 289.894852135816px;"></div></td><td>1132 ms</td><td>1599 ms</td><td>DOM Loading</td></tr><tr><td class="dom" style="width: 500px;"><div style="margin-left: 498.539612997444px; width: 1px;"></div></td><td>2731 ms</td><td>0 ms</td><td>DOM Interactive</td></tr><tr><td class="domcontent" style="width: 500px;"><div style="margin-left: 498.539612997444px; width: 1px;"></div></td><td>2731 ms</td><td>6 ms</td><td>DOM Content Loaded Event Start</td></tr><tr><td class="domcontent" style="width: 500px;"><div style="margin-left: 499.634903249361px; width: 1px;"></div></td><td>2737 ms</td><td>1 ms</td><td>DOM Content Loaded Event End</td></tr><tr><td class="dom" style="width: 500px;"><div style="margin-left: 499.817451624681px; width: 1px;"></div></td><td>2738 ms</td><td>0 ms</td><td>DOM Complete</td></tr><tr><td class="load" style="width: 500px;"><div style="margin-left: 499.817451624681px; width: 1px;"></div></td><td>2738 ms</td><td>1 ms</td><td>Load Event Start</td></tr><tr><td class="load" style="width: 500px;"></td><td>2739 ms</td><td></td><td>Load Event End</td></tr></tbody>
+                    </table>
+
+                    <p>For a detailed description of each timing, you can see <a href="http://www.w3.org/TR/navigation-timing/#sec-navigation-timing-interface">the performancetiming interface at W3C</a>.</p>
+                </div>
+                <div class="no-timings initial-hidden js-show-no-timings">
+                    Unfortunately your browser does not support the <a href="http://www.w3.org/TR/navigation-timing/" target="_blank">JavaScript Navigation Timing APIs</a>, so we cannot gather any useful information about this page load.
+                </div>
+            </div>
+            <div class="timings-upload initial-hidden js-show-on-timings" style="display: block;">
+                <div class="timing-header">
+                    Full Disclosure
+                </div>
+            </div>
+            <div class="timings-content initial-hidden js-show-on-timings" style="display: block;">
+                <div class="timings-data">
+                    Here is exactly what's sent to our servers so we can track page load performance around the world:
+                    <div class="json">{
+  "guid":"442ce293-22af-4d70-b6d6-0a9abf018bc8"
+  "loadEventEnd":2739
+  "loadEventStart":2738
+  "domComplete":2738
+  "domContentLoadedEventEnd":2737
+  "domContentLoadedEventStart":2731
+  "domInteractive":2731
+  "domLoading":1132
+  "responseEnd":1132
+  "responseStart":1116
+  "requestStart":866
+  "secureConnectionStart":554
+  "connectEnd":866
+  "connectStart":367
+  "domainLookupEnd":367
+  "domainLookupStart":40
+  "fetchStart":0
+  "navigationStart":0
+}</div>
+                </div>
+                <div class="initial-hidden js-timings-success timings-success" style="display: block;">
+                    Your timings were successfully submitted, thanks!
+                </div>
+                <div class="initial-hidden js-timings-fail timings-fail">
+                    Uh oh, we had an issue submitting your timings - we have logged the exception and will be taking a look.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why jQuery 1.7.1? Because that's what Stack Overflow and all Stack Exchange Q and A sites use, making it very likely to already cached -->
+    <script src="jquery.min(1).js"></script>
+    <script>
+        function renderTimings() {
+            var timings = window.performance.timing,
+                graphWidth = 500,
+                toDisplay = [
+                    //{ name: 'navigationStart', description: 'Navigation Start' },
+                    //{ name: 'unloadEventStart', description: 'Unload Start' },
+                    //{ name: 'unloadEventEnd', description: 'Unload End' },
+                    //{ name: 'redirectStart', description: 'Redirect Start' },
+                    //{ name: 'redirectEnd', description: 'Redirect End' },
+                    { name: 'fetchStart', description: 'Fetch Start' },
+                    { name: 'domainLookupStart', description: 'Domain Lookup Start', type: 'dns' },
+                    { name: 'domainLookupEnd', description: 'Domain Lookup End', type: 'dns' },
+                    { name: 'connectStart', description: 'Connect Start', type: 'connect' },
+                    { name: 'secureConnectionStart', description: 'Secure Connection Start', type: 'ssl' },
+                    { name: 'connectEnd', description: 'Connect End', type: 'connect' },
+                    { name: 'requestStart', description: 'Request Start', type: 'request' },
+                    { name: 'responseStart', description: 'Response Start', type: 'request' },
+                    { name: 'responseEnd', description: 'Response End', type: 'response' },
+                    { name: 'domLoading', description: 'DOM Loading', type: 'dom' },
+                    { name: 'domInteractive', description: 'DOM Interactive', type: 'dom' },
+                    { name: 'domContentLoadedEventStart', description: 'DOM Content Loaded Event Start', type: 'domcontent' },
+                    { name: 'domContentLoadedEventEnd', description: 'DOM Content Loaded Event End', type: 'domcontent' },
+                    { name: 'domComplete', description: 'DOM Complete', type: 'dom' },
+                    { name: 'loadEventStart', description: 'Load Event Start', type: 'load' },
+                    { name: 'loadEventEnd', description: 'Load Event End', type: 'load' }
+                ];
+
+            var tbody = $('.timings-data tbody'),
+                start = timings.fetchStart,
+                total = timings.loadEventEnd - start,
+                prevOffset = 0, prevGraphCell, prevTiming;
+
+            for (var i = 0; i < toDisplay.length; i++) {
+                var item = toDisplay[i],
+                    itemTiming = timings[item.name];
+
+                if (itemTiming !== undefined && itemTiming !== 0) {
+                    var offset = itemTiming - start,
+                        timeTaken = offset - prevOffset,
+                        newRow = $('<tr />'),
+                        graphCell = $('<td />').css('width', graphWidth).appendTo(newRow).attr('class', item.type);
+
+                    $('<div>').css({
+                        marginLeft: prevOffset / total * graphWidth + 'px',
+                        width: Math.max(timeTaken / total * graphWidth - 2, 1) + 'px'
+                    })
+                        .appendTo(prevGraphCell);
+
+                    $('<td />').appendTo(newRow).text(offset + " ms");
+                    if (prevTiming) prevTiming.text(timeTaken + " ms");
+                    prevTiming = $('<td />').appendTo(newRow);
+                    $('<td />').appendTo(newRow).text(item.description);
+
+                    newRow.appendTo(tbody);
+                    prevOffset = offset;
+                    prevGraphCell = graphCell;
+                }
+            }
+
+            $('.js-hide-on-timings').fadeOut(200, function () {
+                $('.js-show-on-timings').fadeIn(200);
+            });
+            var toUpload = { 'guid':'442ce293-22af-4d70-b6d6-0a9abf018bc8' };
+            for (var t in timings) {
+                if (timings[t] !== 0) {
+                    toUpload[t] = timings[t] === 0 ? null : timings[t] - timings.navigationStart;
+                }
+            }
+            $('.json').text(JSON.stringify(toUpload).replace(/({)|(,)/gi, '$1\n  ').replace('}', '\n}'));
+
+            $.post('/client-timings', toUpload).done(function (data) {
+                $(data ? '.js-timings-success' : '.js-timings-fail').fadeIn();
+            }).fail(function() {
+                $('.js-timings-fail').fadeIn();
+            });
+        }
+
+        var hasTimings = window.performance && window.performance.timing;
+        if (!hasTimings) {
+            $('.js-hide-on-timings').hide();
+            $('.js-show-no-timings').show();
+        } else {
+            $(window).load(function () {
+                setTimeout(renderTimings, 1);
+            });
+        }
+    </script>
+
+</body></html>

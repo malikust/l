@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0202)https://stackauth.com/auth/global/read?request=bIw%2FNo5AtCmTRdlTeTkKddLZIn1qefLTsQYMeCnPcWs0vsk8q8MbLAnuatyTR8yyjxdBmN54Z3O%2FDRd9GE6eCFQ2K4u%2FO%2Bx%2Fk1u5tck8vq4%3D&nonce=ds5uVAAAAAAe1ryPz30KSQ%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <script>
+                  var data = {"ReadSession":"https://stackauth.com/auth/global/read-session","Request":"bIw/No5AtCmTRdlTeTkKddLZIn1qefLTsQYMeCnPcWs0vsk8q8MbLAnuatyTR8yyjxdBmN54Z3O/DRd9GE6eCFQ2K4u/O+x/k1u5tck8vq4=","Nonce":"ds5uVAAAAAAe1ryPz30KSQ==","Referrer":"http://wordpress.stackexchange.com/questions/25910/uninstall-activate-deactivate-a-plugin-typical-features-how-to","StorageName":"GlobalLogin"};
+
+                  var toMsg = window.parent;
+
+                  var obj = localStorage.getItem(data.StorageName);
+                  if(obj != null) {
+                  var req = new XMLHttpRequest();
+                  req.open('POST', data.ReadSession+'?request='+encodeURIComponent(data.Request)+'&nonce='+encodeURIComponent(data.Nonce)+'&seriesAndToken='+encodeURIComponent(obj), false);
+                  req.send(null);
+                  
+                    if(req.status == 200){
+                      toMsg.postMessage(req.responseText, data.Referrer);
+                    }else{
+                      toMsg.postMessage('No Session', data.Referrer);
+                    }
+                  }else{
+                    toMsg.postMessage('No Local Storage', data.Referrer);
+                  }
+                  </script>
+                  <style type="text/css"></style></head><body></body></html>
