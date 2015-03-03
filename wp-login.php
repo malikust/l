@@ -143,7 +143,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	 * @param string $action  The action that brought the visitor to the login page.
 	 */
 	$classes = apply_filters( 'login_body_class', $classes, $action );
-
+ // comments are here
 	?>
 	</head>
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
@@ -702,7 +702,7 @@ case 'register' :
 	login_header(__('Registration Form'), '<p class="message register">' . __('Register For This Site') . '</p>', $errors);
 ?>
 
-<form name="registerform" id="registerform" action="<?php echo esc_url( site_url('wp-login.php?action=register', 'login_post') ); ?>" method="post" novalidate="novalidate">
+<form name="registerform" id="registerform" action="<?php echo esc_url( site_url('wp-login.php?action=register', 'login_post') ); ?>" method="post" novalidate>
 	<p>
 		<label for="user_login"><?php _e('Username') ?><br />
 		<input type="text" name="user_login" id="user_login" class="input" value="<?php echo esc_attr(wp_unslash($user_login)); ?>" size="20" /></label>
